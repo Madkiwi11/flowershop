@@ -1,0 +1,290 @@
+.navbar-custom {
+    background-color: #ffffff; /* Soft pink background */
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center align items vertically */
+    margin-top: -15px;
+    padding: 0 1rem; /* Add padding for spacing */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for depth */
+}
+
+.navbar-brand {
+    margin-left: auto; /* Pushes the logo to the right */
+}
+
+.navbar-brand img {
+    height: 76px; /* Adjust logo size */
+    padding: 5px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes navbar items to the left */
+}
+
+.navbar-nav .nav-item {
+    margin: 0; /* Ensure no extra margin */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Dark text color for contrast */
+    padding: 0.5rem 1rem; /* Adjust padding for fit */
+    font-size: 1rem; /* Adjust font size */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure links are block level for easier clicking */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #d63384; /* Dark pink on hover */
+}
+
+/* Media Queries for responsiveness */
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .navbar-custom {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Ensure space distribution */
+        padding: 0.5rem; /* Adjust padding for small screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 1rem; /* Add space above the nav items */
+        width: 100%; /* Full width for nav items */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%; /* Full width for each nav item */
+        text-align: center; /* Center text in nav items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 1rem; /* Increase padding for touch targets */
+    }
+}
+
+/* Extra small screens (very mobile) */
+@media (max-width: 480px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
+
+.offers {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+padding-top: 20px;
+
+}
+
+.offers h1 {
+    text-align: center;
+    font-size: 32px;
+ 
+    margin-bottom: 20px;
+}
+
+.offer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.offer-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+}
+
+.offer-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.offer-details h2 {
+    font-size: 2rem;
+    color: #595253;
+}
+
+.offer-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:  #f18eb7fa;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .offer {
+        flex-direction: column;
+    }
+
+    .offer-image {
+        border-radius: 8px;
+    }
+}
+
+.image-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px;
+}
+
+.image-section h2 {
+    text-align: center;
+    color: #595253;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* إضافة تأثير التفاعل */
+}
+
+.image-link {
+    display: block;
+}
+
+.image-link:hover img {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند التمرير فوقها */
+}
+
+.buy-now {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f18eb7fa;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.buy-now:hover {
+    background-color:  #ee6593;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+.icon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* يستخدم لملء ارتفاع الصفحة */
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none; /* إزالة خط التسطير من الرابط */
+    color: #ff69b4; /* لون النص داخل الرابط */
+    transition: color 0.3s, transform 0.3s; /* تأثيرات التحول عند التفاعل */
+}
+
+.icon {
+    font-size: 30px; /* حجم أصغر للأيقونة */
+    margin-bottom: 5px; /* المسافة بين الأيقونة والنص */
+}
+
+.more-text {
+    font-size: 14px; /* حجم نص More */
+}
+
+.icon-link:hover .icon {
+    color: #ffc4e3; /* لون الأيقونة عند التمرير */
+}
+
+.icon-link:hover .more-text {
+    color: #ff1493; /* لون النص عند التمرير */
+    transform: scale(1.1); /* تكبير النص عند التمرير */
+}
+/* styles.css */
+
+/* إخفاء النقاط الافتراضية من قائمة النقاط */
+.nav-list {
+    list-style: none; /* إزالة النقاط */
+    padding: 0; /* إزالة الحشو الافتراضي */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+/* تنسيق الحاوية للأيقونة */
+.cart-icon-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* تنسيق الأيقونة */
+.cart-icon {
+    font-size: 24px; /* حجم الأيقونة */
+    color: #333; /* لون الأيقونة */
+}
+
+/* تنسيق الرقم */
+.cart-count {
+    position: absolute;
+    top: -10px; /* موقع الرقم على الأيقونة */
+    right: -10px; /* موقع الرقم على الأيقونة */
+    background-color: red; /* لون الخلفية للرقم */
+    color: white; /* لون النص */
+    border-radius: 50%; /* جعل الرقم دائري */
+    padding: 2px 6px; /* حجم الرقم */
+    font-size: 14px; /* حجم الخط للرقم */
+    font-weight: bold; /* جعل الرقم سميك */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0; /* إزالة التباعد الافتراضي */
+    margin: 0;  /* إزالة الهوامش الافتراضية */
+}

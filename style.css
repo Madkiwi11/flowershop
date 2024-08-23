@@ -1,0 +1,735 @@
+/* styles.css */
+/* Styles for the Navbar */
+.navbar-custom {
+    background-color: #ffffff; /* Soft pink background */
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center align items vertically */
+    margin-top: -15px;
+    padding: 0 1rem; /* Add padding for spacing */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for depth */
+}
+
+.navbar-brand {
+    margin-left: auto; /* Pushes the logo to the right */
+}
+
+.navbar-brand img {
+    height: 76px; /* Adjust logo size */
+    padding: 5px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes navbar items to the left */
+}
+
+.navbar-nav .nav-item {
+    margin: 0; /* Ensure no extra margin */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Dark text color for contrast */
+    padding: 0.5rem 1rem; /* Adjust padding for fit */
+    font-size: 1rem; /* Adjust font size */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure links are block level for easier clicking */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #d63384; /* Dark pink on hover */
+}
+
+/* Media Queries for responsiveness */
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .navbar-custom {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: space-between; /* Ensure space distribution */
+        padding: 0.5rem; /* Adjust padding for small screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 1rem; /* Add space above the nav items */
+        width: 100%; /* Full width for nav items */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%; /* Full width for each nav item */
+        text-align: center; /* Center text in nav items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 1rem; /* Increase padding for touch targets */
+    }
+}
+
+/* Extra small screens (very mobile) */
+@media (max-width: 480px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
+
+
+/* Ensure the whole section covers the viewport height */
+.hero-section {
+
+    background-color: #f1dae4; /* Light pink background */
+    margin-top: -21px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px; /* Optional padding to prevent edge-to-edge content */
+}
+
+.flower-container {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Align to the right */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 1;
+}
+
+.flower-img {
+    width: 380px; /* Adjust size as needed */
+    animation: flowerAnimation 15s infinite; /* Longer duration for more dynamic effect */
+}
+
+/* Keyframes for flower animation */
+@keyframes flowerAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) rotate(15deg) scale(1.1); /* Move up and rotate */
+    }
+    100% {
+        transform: translateY(0) rotate(-15deg) scale(1); /* Return to original position */
+    }
+}
+
+/* Animation for the hero title */
+.hero-title {
+    position: relative;
+    z-index: 2;
+    color: #333; /* Dark text color for contrast */
+    font-size: 3rem; /* Adjust size as needed */
+    margin-bottom: 1rem;
+    animation: titleAnimation 5s ease-in-out infinite; /* Animation duration and type */
+}
+
+/* Keyframes for title animation */
+@keyframes titleAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.hero-description {
+    position: relative;
+    z-index: 2;
+    color: #555; /* Slightly lighter text color */
+    font-size: 1.25rem; /* Adjust size as needed */
+    max-width: 600px; /* Restrict width */
+    margin: 0 auto; /* Center text */
+}
+
+.shop-now-btn {
+    
+    display: inline-block;
+    background-color: #f18eb7fa; /* Bright pink color */
+    color: #fff; /* White text */
+    font-size: 1.2rem; /* Slightly larger font size */
+    padding: 0.75rem 1rem; /* Padding for a comfy click area */
+    border-radius: 30px; /* Rounded edges for a cute look */
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Bold text */
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.shop-now-btn:hover {
+    background-color: #ee6593; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.rose-slider {
+    padding: 40px 20px;
+    background-color: #f1dae4; /* Light pink background */
+    text-align: center;
+}
+
+.slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.slider-item {
+    flex: 1 1 calc(33.333% - 20px); /* Responsive width */
+      max-width: 1000px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-item img {
+    width: 47%;
+    border-radius: 10px;
+}
+
+.slider-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.buy-now-btn {
+    display: inline-block;
+    background-color: #f18eb7fa; /* Bright pink color */
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.buy-now-btn:hover {
+    background-color:  #ee6593;
+    transform: scale(1.05);
+}
+
+.moon {
+    color: #595253;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slider-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-item {
+        flex: 1 1 100%; /* One item per row on small screens */
+    }
+}
+.bloom-carousel {
+    padding: 20px;
+    background-color: #f1dae4; /* Light pink background */
+    text-align: center;
+}
+
+.carousel-heading {
+    color: #595253;
+    margin-bottom: 20px;
+}
+
+.carousel-wrapper {
+    overflow-x: auto;
+
+    display: flex;
+    
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.carousel-slide {
+    flex: 0 0 auto; /* Prevent items from stretching */
+    width: 150px;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-slide {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        width: 100px;
+    }
+}
+.carousel-wrapper {
+    overflow-x: hidden; /* Keep horizontal scrolling functionality */
+    sc
+    scrollbar-color: red; /* Hide scrollbar in Firefox */
+    white-space: nowrap; /* Ensure child elements stay in one line */
+    max-width: 80%; /* Reduce the width of the visible area */
+    margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+
+/* Floral Event Section Styles */
+.floral-event-section {
+    padding: 30px;
+
+    text-align: center;
+}
+
+.floral-event-section h2 {
+    color: #595253;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Adjust font size */
+}
+
+.floral-event-section p {
+    color: #555;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    max-width: 100%; /* Full width to ensure responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout for images and descriptions */
+.floral-event-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -30px; /* Space between items */
+}
+
+.floral-event-display {
+    display: flex;
+    justify-content: center; /* Center align items */
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Adjust for a more consistent width */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.floral-event-display:nth-child(odd) {
+    flex-direction: row; /* For odd items: image on the left, text on the right */
+}
+
+.floral-event-display:nth-child(even) {
+    flex-direction: row-reverse; /* For even items: image on the right, text on the left */
+}
+
+.floral-event-display img {
+    width: 40%; /* Adjusted for smaller images */
+    max-width: 300px; /* Limit maximum size */
+    height: auto;
+    border-radius: 10px;
+}
+
+.floral-event-display p {
+    width: 50%; /* Text occupies more space */
+    margin: 8px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    padding: 0 10px; /* Adjust padding for better spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .floral-event-display {
+        flex-direction: column;
+        text-align: center;
+    }
+
+   
+
+    .floral-event-display p {
+        padding: 0; /* Remove padding on smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .floral-event-section p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .floral-event-display img {
+        max-width: 100%; /* Make image responsive */
+        width: 50%;
+    }
+
+    .floral-event-display p {
+        font-size: 0.75rem; /* Smaller font size for very small screens */
+    }
+}
+
+.navy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.crimson-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* عرض أكبر للواجهة بحيث تظهر عدة صور */
+    overflow: hidden;
+}
+
+.crimson-carousel input[type="radio"] {
+    display: none;
+}
+
+.forest-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.beige-slide {
+    min-width: 33.333%; /* عرض ثلاثة صور في الواجهة */
+}
+
+.beige-slide img {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.peach-controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lavender-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+   
+    cursor: pointer;
+}
+
+#slide1:checked ~ .forest-wrapper {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .forest-wrapper {
+    transform: translateX(-33.333%);
+}
+
+#slide3:checked ~ .forest-wrapper {
+    transform: translateX(-66.666%);
+}
+
+#slide4:checked ~ .forest-wrapper {
+    transform: translateX(-100%);
+}
+
+.peach-controls label[for="slide1"]:checked,
+.peach-controls label[for="slide2"]:checked,
+.peach-controls label[for="slide3"]:checked,
+.peach-controls label[for="slide4"]:checked {
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.flower-carousel-section {
+    padding: 20px;
+    background-color: #f8d7da; /* Light pink background */
+    text-align: center;
+}
+
+.carousel-title {
+    color: #595253;
+    margin-bottom: 20px;
+}
+
+.carousel-wrapper {
+    overflow: hidden; /* Hide the overflow to create a sliding effect */
+    position: relative;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+    margin-right: 20px; /* Space between items */
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-43%);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 100px;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.about-us {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    b
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+
+.shop-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    color: #595253;
+    margin-bottom: 20px;
+    
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .shop-image {
+        max-width: 100%;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+}
+.contact-us {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    flex: 1;
+    min-width: 280px;
+}
+
+.social-media h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #f18eb7fa;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icon {
+    font-size: 40px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f18eb7fa;
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+   
+
+    .social-icon {
+        margin: 10px 0;
+    }
+}
+/* styles.css */
+
+/* تنسيق الحاوية للأيقونة */
+.cart-icon-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* تنسيق الأيقونة */
+.cart-icon {
+    font-size: 24px; /* حجم الأيقونة */
+    color: #333; /* لون الأيقونة */
+    text-decoration: none;
+}
+
+/* تنسيق الرقم */
+.cart-count {
+    position: absolute;
+    top: -10px; /* موقع الرقم على الأيقونة */
+    right: -10px; /* موقع الرقم على الأيقونة */
+    background-color: red; /* لون الخلفية للرقم */
+    color: white; /* لون النص */
+    border-radius: 50%; /* جعل الرقم دائري */
+    padding: 2px 6px; /* حجم الرقم */
+    font-size: 14px; /* حجم الخط للرقم */
+    font-weight: bold; /* جعل الرقم سميك */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0; /* إزالة التباعد الافتراضي */
+    margin: 0;  /* إزالة الهوامش الافتراضية */
+}
